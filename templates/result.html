@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Result</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css" as="style">
+  </head>
+  <body>
+    <center>
+      <div class="center">
+      <h1>Internal Assessment Result</h1>
+        <h5 id="Welcome">Welcome {{ls2[0]}}</h5>
+        <br/>
+        <table>
+          <tr>
+          <th colspan="2">Student Details</th>  
+          </tr>
+    {% for i in range(0,3) %}
+    <tr>
+        <td>{{ls1[i]}}</td>
+        <td>{{ls2[i]}}</td>
+  </tr>
+    {% endfor %}
+  </table>
+        <br/>
+        <table>
+          <tr>
+            <th>Subject</th>
+            <th>Mark</th>
+          </tr>
+          {% for i in range(3,lenght1-1) %}
+            <tr>
+              <td>{{ls1[i]}}</td>
+              <td>{{ls2[i]}}</td>
+            </tr>
+          {% endfor %}
+          <tr>
+            <td>{{ls1[lenght1-1]}}</td>
+            <td>{{ls2[lenght1-1]}}</td>
+          </tr>
+        </table>
+        <br/>
+    </div>
+    </center>
+  </body>
+</html>

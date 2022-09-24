@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - youtube.com/codingnepal -->
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <title>Result</title>
+ <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" type="text/css">
+  </head>
+  <body>
+    <div class="center">
+      <h1>Internal Assessment Result</h1>
+      <p id="head5">Status:{{status}}</p>
+      <form action="/result" method="post">
+        <div class="txt_field">
+          <input type="text" id="regno" name="regno1">
+          <span></span>
+          <label>Register Number</label>
+        </div>
+        <div class="txt_field">
+          <input type="text" id="dob" name="dob1">
+          <span></span>
+          <label>Date of birth(DD/MM/YY)</label>
+        </div>
+                <div class="txt_field">
+
+        <div class="custom-select" style="width:200px;">    
+  <select name="Year" id="Year">
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+  </select>
+</div>
+        </div>
+        <input type="submit" value="Login">
+      <br/>
+        <!--
+        <div class="signup_link">
+         <a href="#"></a>
+        </div>
+        -->
+      </form>
+    </div>
+
+  </body>
+</html>
